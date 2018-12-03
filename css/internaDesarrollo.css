@@ -26,6 +26,7 @@ span {
 }
 
 
+
 .img_linea_tiempo > img{
 	
 	position: absolute;
@@ -33,9 +34,32 @@ span {
 	width: 90%;
 }
 
+.img_marcador > img {
+	position: absolute;
+	top: 78%;
+	z-index: 240;
+}
 
 .division_linea_tiempo > img {
 	position: absolute;
-	bottom: 13%;
+	bottom: 15%;
 	
 }
+
+.linea_tiempo> div > div {
+	position: absolute;
+
+}
+
+.etiqueta_meses > div {
+	top: 78%;
+	color: white;
+	font-size: 10px
+}
+
+.etiqueta_years > div {
+	top: 86%;
+	font-size: 8px;
+	color: rgb(126, 32, 34)
+}
+

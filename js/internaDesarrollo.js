@@ -123,6 +123,7 @@ function fillScene() {
 
         objectsScene.push(object1);
         scene.add( object1 );
+        pintarDeptos();
        
 
     } );
@@ -142,4 +143,26 @@ function render() {
     cameraControls.update();
     camera.updateProjectionMatrix();
 
+}
+
+
+function pintarDeptos() {
+
+
+    var getUniqueDepto = new getDataModel3D(object1)
+
+    var deptosToPaint = (getUniqueDepto.getAllMeshesToPaint())
+    
+    reasignarMaterial(deptosToPaint[1])
+
+}
+
+function reasignarMaterial(t) {
+
+   
+
+    t.material= new THREE.MeshLambertMaterial( { transparent: true, opacity: 1 } );
+    t.material.color = {r:255, g:0, b:0} 
+    t.material.opacity=.8;
+    t.material.name="single";
 }
